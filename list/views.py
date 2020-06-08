@@ -16,5 +16,5 @@ class BusinessListApiView(ListAPIView):
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        serialize = BusinessListSerializer(self.filter_queryset(queryset), many=True)
+        serialize = BusinessListSerializer(queryset, many=True)
         return Response(serialize.data, status=200)

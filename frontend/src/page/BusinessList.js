@@ -9,7 +9,7 @@ const fatchList = async () => {
         protocol = 'https:'
     }
     try{
-        let {data} = await axios.get(`${protocol}//127.0.0.1:8000/business-list`);
+        let {data} = await axios.get(`${protocol}//127.0.0.1:8000/api/business-list`);
         return data
     } catch(error) {
         //  console.log(error)

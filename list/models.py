@@ -6,7 +6,6 @@ User = get_user_model()
 class BusinessList(models.Model):
     create_by = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
-    image = models.ImageField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
 
     create_at = models.DateTimeField(auto_now=True)

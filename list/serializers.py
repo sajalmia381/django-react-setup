@@ -16,5 +16,5 @@ class BusinessListSerializer(serializers.ModelSerializer):
     class Meta:
         model = BusinessList
         fields = [
-            'create_by', 'name', 'image', 'description', 'create_at', 'update_at'
+            'create_by', 'name', 'description', 'create_at', 'update_at'
         ]
