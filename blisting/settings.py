@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3+s7mif(n%%1j%e6c2l_1jfm)zf3t^ozmz7ovd-qq@%tadbi0n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.blisting.herokuapp.com']
+ALLOWED_HOSTS = ['.blisting.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -148,5 +148,6 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "http://blisting.herokuapp.com"
 ]
 CORS_URLS_REGEX = r'^/api/.*$'
