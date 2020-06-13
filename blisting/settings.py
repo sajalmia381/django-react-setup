@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3+s7mif(n%%1j%e6c2l_1jfm)zf3t^ozmz7ovd-qq@%tadbi0n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.blisting.herokuapp.com', '127.0.0.1']
 
@@ -133,6 +133,9 @@ STATICFILES_DIRS = [
     os.path.join(REACT_APP_DIR, 'build', 'static')
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
